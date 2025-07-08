@@ -21,7 +21,7 @@ public class JuegoAhorcado {
         while (intentos > 0 && !palabra.estaCompleta()) {
             DibujoAhorcado.mostrar(intentos);
             palabra.mostrarProgreso();
-            System.out.println("Intentos restantes: " + intentos);
+            System.out.println("Te quedan: " + intentos + " intentos.");
             System.out.print("Ingresa una letra: ");
 
             String entrada = sc.nextLine().toUpperCase();
@@ -33,7 +33,7 @@ public class JuegoAhorcado {
             char letra = entrada.charAt(0);
 
             if (letraYaUsada(letra)) {
-                System.out.println("Ya intentaste con la letra '" + letra + "'. Prueba con otra nueva.");
+                System.out.println("Ya hemos intentado con la letra '" + letra + "'. Prueba con otra nueva.");
                 continue;
             }
 
